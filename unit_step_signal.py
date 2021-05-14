@@ -9,6 +9,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 n = int(input('Enter the value of n: '))
-t = np.linspace(0, n, n)
+t = np.linspace(0, n - 1, n)
 y = np.ones(n, dtype=int)
 plt.plot(t, y)
+plt.stem(t, y)
