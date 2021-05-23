@@ -9,7 +9,11 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 n = int(input('Enter the value of n: '))
-t = np.linspace(0, n - 1, n)
-y = np.ones(n, dtype=int)
+t = np.linspace(-n, n - 1, 2 * n)
+# y = np.ones(2 * n, dtype=int)
+y = np.zeros(n, dtype=int);
+y = np.append(y, np.ones(n, dtype=int))
+plt.xlabel('Time');
+plt.ylabel('Amplitude')
 plt.plot(t, y)
 plt.stem(t, y)
